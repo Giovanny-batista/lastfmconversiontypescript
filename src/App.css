@@ -1,0 +1,157 @@
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column; 
+}
+
+
+.App {
+  max-width: 800px;
+  width: 100%;
+  flex: 1; 
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; 
+}
+
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+
+.search-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00244a;
+  color: #393fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: #007bff; 
+}
+
+button:hover {
+  background-color: #050506;
+}
+
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.result-item {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.result-item:hover {
+  transform: translateY(-5px);
+}
+
+.result-item h2 {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.result-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.artist-info button,
+.info-tabs button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.2s;
+}
+
+.artist-info button:hover,
+.info-tabs button:hover {
+  background-color: #0056b3;
+}
+
+.additional-info {
+  margin-top: 20px;
+}
+
+.additional-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.info-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .results {
+    flex-direction: column;
+  }
+
+  .result-item {
+    width: 100%;
+  }
+}
